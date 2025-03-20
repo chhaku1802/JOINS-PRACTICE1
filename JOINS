@@ -1,0 +1,67 @@
+
+•	CREATE EMPLOYEEE TABLE
+CREATE TABLE EMPLOYEE (
+  empId int,
+  name varchar(15),
+  dept_id int
+)
+INSERT INTO EMPLOYEE(empId,name,dept_id) VALUES (1, 'Sushil', 101);
+INSERT INTO EMPLOYEE(empId,name,dept_id) VALUES (2, 'Bhavesh', 102);
+INSERT INTO EMPLOYEE(empId,name,dept_id) VALUES (3, 'Payal', 103);
+INSERT INTO EMPLOYEE(empId,name,dept_id) VALUES (4, 'Charu', 104);
+INSERT INTO EMPLOYEE(empId,name,dept_id) VALUES (5, 'Vaidehi', 105);
+SELECT * FROM EMPLOYEE;
+ 
+•	Create the DEPARTMENT table
+CREATE TABLE DEPARTMENT (
+  dept_id INT,
+  dept_name VARCHAR(15)
+);
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (101, 'HR');
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (102, 'Finance');
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (103, 'IT');
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (104, 'Marketing');
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (105, 'IT');
+SELECT * FROM DEPARTMENT;
+ 
+INNER JOIN
+SELECT EMPLOYEE.empId, EMPLOYEE.name, DEPARTMENT.dept_name
+FROM EMPLOYEE
+INNER JOIN DEPARTMENT
+ON EMPLOYEE.dept_id = DEPARTMENT.dept_id;
+SELECT * FROM DEPARTMENT;
+ 
+ 
+ 
+ 
+LEFT JOIN
+SELECT EMPLOYEE.empId, EMPLOYEE.name, DEPARTMENT.dept_name
+FROM EMPLOYEE
+LEFT JOIN DEPARTMENT
+ON EMPLOYEE.dept_id = DEPARTMENT.dept_id;
+SELECT * FROM DEPARTMENT;
+
+RIGHT JOIN
+SELECT EMPLOYEE.empId, EMPLOYEE.name, DEPARTMENT.dept_name
+FROM EMPLOYEE
+RIGHT JOIN DEPARTMENT
+ON EMPLOYEE.dept_id = DEPARTMENT.dept_id;
+SELECT * FROM DEPARTMENT;
+
+FULL OUTER JOIN
+SELECT EMPLOYEE.empId, EMPLOYEE.name, DEPARTMENT.dept_name
+FROM EMPLOYEE
+FULL OUTER JOIN DEPARTMENT
+ON EMPLOYEE.dept_id = DEPARTMENT.dept_id;
+SELECT * FROM DEPARTMENT;
+
+
+OUTPUT:-
+![Image](https://github.com/user-attachments/assets/4f8bb47d-630e-4eeb-a76f-35693661541e)
+![Image](https://github.com/user-attachments/assets/0f15cd28-0f2b-41a9-84c4-7977ee5cf3bf)
+![Image](https://github.com/user-attachments/assets/05347083-12ef-42cf-858a-85419d96a717)
+![Image](https://github.com/user-attachments/assets/a2f0dcdd-8b73-4c16-b8fb-791325b1f663)
+![Image](https://github.com/user-attachments/assets/98987040-0351-46ef-982f-02370b1d33b4)
+![Image](https://github.com/user-attachments/assets/697bab99-a067-4561-adf5-897725e9bef4)
+![Image](https://github.com/user-attachments/assets/5026b035-d980-4069-bb0f-5e62caaef029)
+![Image](https://github.com/user-attachments/assets/e3a0f733-2eeb-454e-a9c5-4d882f5c0345)
